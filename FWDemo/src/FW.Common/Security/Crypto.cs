@@ -5,7 +5,7 @@ using System.Runtime.CompilerServices;
 using System.Security.Cryptography;
 using System.Text;
 
-namespace FW.Common.Extensions
+namespace FW.Common.Security
 {
     public static class Crypto
     {
