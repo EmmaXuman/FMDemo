@@ -21,25 +21,27 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "7.WebHost", "7.WebHost", "{
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{27408EB5-468E-4CC0-B5BF-8FAE3A5A25FA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FW.Common", "src\FW.Common\FW.Common.csproj", "{9D16B1E8-D225-47DC-9A73-08922D981D7C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FW.Common", "src\FW.Common\FW.Common.csproj", "{9D16B1E8-D225-47DC-9A73-08922D981D7C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FW.Entities", "src\FW.Entities\FW.Entities.csproj", "{8111C2F6-B446-4F47-9EF4-EFABF9A9404B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FW.Entities", "src\FW.Entities\FW.Entities.csproj", "{8111C2F6-B446-4F47-9EF4-EFABF9A9404B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FW.WebCore", "src\FW.WebCore\FW.WebCore.csproj", "{84E6F58C-6012-4BE1-857C-883646E93056}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FW.WebCore", "src\FW.WebCore\FW.WebCore.csproj", "{84E6F58C-6012-4BE1-857C-883646E93056}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FW.UintOfWork", "src\FW.UintOfWork\FW.UintOfWork.csproj", "{A0B8AE0A-D8A3-4236-8BEE-0C93735150DF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FW.UintOfWork", "src\FW.UintOfWork\FW.UintOfWork.csproj", "{A0B8AE0A-D8A3-4236-8BEE-0C93735150DF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FW.DbContexts", "src\FW.DbContexts\FW.DbContexts.csproj", "{6D256001-0FFE-419D-BB52-2F84A1EBF258}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FW.DbContexts", "src\FW.DbContexts\FW.DbContexts.csproj", "{6D256001-0FFE-419D-BB52-2F84A1EBF258}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FW.Component.Aop", "src\FW.Component.Aop\FW.Component.Aop.csproj", "{4A8266A7-ECDD-4A1A-86AA-ED99D78F3D2A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FW.Component.Aop", "src\FW.Component.Aop\FW.Component.Aop.csproj", "{4A8266A7-ECDD-4A1A-86AA-ED99D78F3D2A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FW.Compoment.Jwt", "src\FW.Compoment.Jwt\FW.Compoment.Jwt.csproj", "{2550808D-BEAC-4711-86FA-3495C8B3B474}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FW.Compoment.Jwt", "src\FW.Compoment.Jwt\FW.Compoment.Jwt.csproj", "{2550808D-BEAC-4711-86FA-3495C8B3B474}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FW.Models", "src\FW.Models\FW.Models.csproj", "{0EA1A7E0-6B30-4844-BECB-DAC8D56DE37D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FW.Models", "src\FW.Models\FW.Models.csproj", "{0EA1A7E0-6B30-4844-BECB-DAC8D56DE37D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FW.Services", "src\FW.Services\FW.Services.csproj", "{F812681D-978C-48DC-A3C3-790F1052DF09}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FW.Services", "src\FW.Services\FW.Services.csproj", "{F812681D-978C-48DC-A3C3-790F1052DF09}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FW.WebApi", "src\FW.WebApi\FW.WebApi.csproj", "{A06ADC05-A8C5-468B-AD8B-6843F91BC7F2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FW.WebApi", "src\FW.WebApi\FW.WebApi.csproj", "{A06ADC05-A8C5-468B-AD8B-6843F91BC7F2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommonTests", "tests\CommonTests\CommonTests.csproj", "{14684581-876F-4A70-99BF-E9E1952B03C2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -87,6 +89,10 @@ Global
 		{A06ADC05-A8C5-468B-AD8B-6843F91BC7F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A06ADC05-A8C5-468B-AD8B-6843F91BC7F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A06ADC05-A8C5-468B-AD8B-6843F91BC7F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{14684581-876F-4A70-99BF-E9E1952B03C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14684581-876F-4A70-99BF-E9E1952B03C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14684581-876F-4A70-99BF-E9E1952B03C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14684581-876F-4A70-99BF-E9E1952B03C2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -109,6 +115,7 @@ Global
 		{0EA1A7E0-6B30-4844-BECB-DAC8D56DE37D} = {51F0DCD1-2245-497A-979B-62DBB0638E89}
 		{F812681D-978C-48DC-A3C3-790F1052DF09} = {7F73EF55-C2D7-41D0-9C15-EFC4221C1809}
 		{A06ADC05-A8C5-468B-AD8B-6843F91BC7F2} = {7E67186B-3831-4B0B-94C3-B53A0F2F9A8A}
+		{14684581-876F-4A70-99BF-E9E1952B03C2} = {27408EB5-468E-4CC0-B5BF-8FAE3A5A25FA}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8E5F50CD-3881-416E-8FCD-224873BA5C9B}
