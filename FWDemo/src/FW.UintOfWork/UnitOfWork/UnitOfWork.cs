@@ -77,7 +77,7 @@ namespace FW.UintOfWork.UnitOfWork
         /// <returns></returns>
         public int SaveChanges()
         {
-            throw new NotImplementedException();
+            return _context.SaveChanges();
         }
 
         /// <summary>

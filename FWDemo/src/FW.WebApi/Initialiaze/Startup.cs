@@ -1,14 +1,11 @@
+using FW.DbContexts;
+using FW.UintOfWork;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace FW.WebApi
 {
@@ -25,6 +22,8 @@ namespace FW.WebApi
         public void ConfigureServices( IServiceCollection services )
         {
             services.AddControllers();
+            var connStr = Configuration.GetSection("ConnectionStrings:MSDbContext").Value;
+            services.AddUnitOfWorkService<MSDbContext>(options=> { options.UseMySql(Configuration.GetSection("ConnectionStrings:MSDbContext").Value); });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

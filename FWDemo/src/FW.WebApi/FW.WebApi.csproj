@@ -4,5 +4,15 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="3.2.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\FW.Common\FW.Common.csproj" />
+    <ProjectReference Include="..\FW.DbContexts\FW.DbContexts.csproj" />
+    <ProjectReference Include="..\FW.Entities\FW.Entities.csproj" />
+  </ItemGroup>
+
 
 </Project>
