@@ -12,6 +12,7 @@
     <ProjectReference Include="..\FW.Common\FW.Common.csproj" />
     <ProjectReference Include="..\FW.DbContexts\FW.DbContexts.csproj" />
     <ProjectReference Include="..\FW.Entities\FW.Entities.csproj" />
+    <ProjectReference Include="..\FW.WebCore\FW.WebCore.csproj" />
   </ItemGroup>
 
 
