@@ -4,4 +4,15 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="7.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\FW.Common\FW.Common.csproj" />
+    <ProjectReference Include="..\FW.Models\FW.Models.csproj" />
+    <ProjectReference Include="..\FW.UintOfWork\FW.UintOfWork.csproj" />
+    <ProjectReference Include="..\FW.WebCore\FW.WebCore.csproj" />
+  </ItemGroup>
+
 </Project>

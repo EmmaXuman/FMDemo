@@ -5,6 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="7.1.0" />
     <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="3.2.4" />
   </ItemGroup>
 
@@ -12,7 +13,15 @@
     <ProjectReference Include="..\FW.Common\FW.Common.csproj" />
     <ProjectReference Include="..\FW.DbContexts\FW.DbContexts.csproj" />
     <ProjectReference Include="..\FW.Entities\FW.Entities.csproj" />
+    <ProjectReference Include="..\FW.Models\FW.Models.csproj" />
+    <ProjectReference Include="..\FW.Services\FW.Services.csproj" />
     <ProjectReference Include="..\FW.WebCore\FW.WebCore.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="NLog.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 
 
