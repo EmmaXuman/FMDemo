@@ -1,8 +1,5 @@
 ﻿using Autofac;
 using Microsoft.Extensions.DependencyInjection;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace FW.Services
 {
@@ -15,7 +12,7 @@ namespace FW.Services
             return services;
         }
 
-        public static void RegisterServices(this ContainerBuilder builder)
+        public static void RegisterServices( this ContainerBuilder builder )
         {
             builder.RegisterType<BaseService>().As<IBaseService>().InstancePerLifetimeScope();
             builder.RegisterType<RoleService>().As<IRoleService>().InstancePerLifetimeScope();
