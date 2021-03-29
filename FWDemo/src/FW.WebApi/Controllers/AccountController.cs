@@ -5,15 +5,12 @@ using FW.WebApi.Controllers.Base;
 using FW.WebCore.Core;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace FW.WebApi.Controllers
 {
     [ApiController]
-    public class AccountController: AuthorizeController
+    public class AccountController : AuthorizeController
     {
         private readonly IAccountService _accountService;
 

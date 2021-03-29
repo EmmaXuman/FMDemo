@@ -8,9 +8,6 @@ using FW.UintOfWork.UnitOfWork;
 using FW.WebCore;
 using FW.WebCore.Core;
 using Microsoft.Extensions.Options;
-using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace FW.Services.Account
@@ -20,7 +17,7 @@ namespace FW.Services.Account
         private readonly JwtService _jwtService;
         private readonly SiteSetting _siteSetting;
 
-        public AccountService( JwtService jwtService, IOptions<SiteSetting> options, IUnitOfWork<MSDbContext> unitOfWork, IMapper mapper, IdWorker idWorker,IClaimsAccessor claimsAccessor ):base(unitOfWork,mapper, idWorker,claimsAccessor)
+        public AccountService( JwtService jwtService, IOptions<SiteSetting> options, IUnitOfWork<MSDbContext> unitOfWork, IMapper mapper, IdWorker idWorker, IClaimsAccessor claimsAccessor ) : base(unitOfWork, mapper, idWorker, claimsAccessor)
         {
             _jwtService = jwtService;
             _siteSetting = options.Value;

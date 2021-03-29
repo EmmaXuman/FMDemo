@@ -1,5 +1,4 @@
 ﻿using AutoMapper;
-using Microsoft.EntityFrameworkCore;
 using FW.Common.Security;
 using FW.Compoment.Jwt.UserClaim;
 using FW.DbContexts;
@@ -8,10 +7,9 @@ using FW.Entities.Core;
 using FW.UintOfWork.UnitOfWork;
 using FW.WebCore;
 using FW.WebCore.Core;
+using Microsoft.EntityFrameworkCore;
 using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace FW.Models.ViewModel
