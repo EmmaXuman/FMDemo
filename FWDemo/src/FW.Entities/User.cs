@@ -1,4 +1,5 @@
 ﻿using FW.Entities.Core;
+using System;
 
 namespace FW.Entities
 {

@@ -1,4 +1,6 @@
 using Autofac;
+using FW.Compoment.Jwt;
+using FW.Component.Aop;
 using FW.DbContexts;
 using FW.Models.Automapper;
 using FW.Services;
@@ -34,7 +36,8 @@ namespace FW.WebApi
         public void ConfigureContainer( ContainerBuilder builder )
         {
             //注册IBaseService和IRoleService接口及对应的实现类
-            builder.RegisterServices();
+            //builder.RegisterServices();
+            builder.AddAopService(ServiceExtensions.GetAssemblyName());
         }
         public IConfiguration Configuration { get; }
 
@@ -55,6 +58,9 @@ namespace FW.WebApi
             services.AddAutomapperService();
             //注册Service类库中的服务
             //services.AddServiceExtention();
+
+            //注册jwt服务
+            services.AddJwtService(Configuration);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -69,7 +75,9 @@ namespace FW.WebApi
 
             app.UseCors(WebCoreExtensions.MyAllowSpecificOrigins);//添加跨域
 
-            app.UseAuthorization();
+            app.UseAuthentication();//添加认证中间件
+
+            app.UseAuthorization();//授权中间件，中间件的顺序不能随意调整
 
             app.UseEndpoints(endpoints =>
             {

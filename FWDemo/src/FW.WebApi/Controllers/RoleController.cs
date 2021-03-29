@@ -1,5 +1,6 @@
 ﻿using FW.Models.ViewModel;
 using FW.Services;
+using FW.WebApi.Controllers.Base;
 using FW.WebCore.Core;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -9,9 +10,8 @@ using System.Threading.Tasks;
 
 namespace FW.WebApi.Controllers
 {
-    [Route("[controller]")]
     [ApiController]
-    public class RoleController : ControllerBase
+    public class RoleController : AuthorizeController
     {
         private readonly IRoleService _roleService;
 

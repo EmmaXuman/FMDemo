@@ -9,6 +9,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\FW.Compoment.Jwt\FW.Compoment.Jwt.csproj" />
     <ProjectReference Include="..\FW.DbContexts\FW.DbContexts.csproj" />
     <ProjectReference Include="..\FW.Entities\FW.Entities.csproj" />
     <ProjectReference Include="..\FW.UintOfWork\FW.UintOfWork.csproj" />

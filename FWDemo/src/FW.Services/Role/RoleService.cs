@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using FW.Common.IDCode;
+using FW.Compoment.Jwt.UserClaim;
 using FW.DbContexts;
 using FW.Entities;
 using FW.Models.ViewModel;
@@ -14,7 +15,7 @@ namespace FW.Services
 {
     public class RoleService : BaseService, IRoleService
     {
-        public RoleService( IUnitOfWork<MSDbContext> unitOfWork, IMapper mapper, IdWorker idWorker ) : base(unitOfWork, mapper, idWorker)
+        public RoleService( IUnitOfWork<MSDbContext> unitOfWork, IMapper mapper, IdWorker idWorker,IClaimsAccessor claimsAccessor ) : base(unitOfWork, mapper, idWorker, claimsAccessor)
         {
         }
 
@@ -31,7 +32,7 @@ namespace FW.Services
             {
                 Role newRow = _mapper.Map<Role>(viewModel);
                 newRow.Id = _idWorker.NextId();//获取一个雪花id
-                newRow.Creator = 1219490056771866624;
+                newRow.Creator = _claimAccessor.UserId;
                 newRow.CreateTime = DateTime.Now;
                 _unitOfWork.GetRepository<Role>().Insert(newRow);
                 await _unitOfWork.SaveChangesAsync();
@@ -69,7 +70,7 @@ namespace FW.Services
             row.Name = viewModel.Name;
             row.DisplayName = viewModel.DisplayName;
             row.Remark = viewModel.Remark;
-            row.Modifier = 1219490056771866624;
+            row.Modifier = _claimAccessor.UserId;
             row.ModifyTime = DateTime.Now;
             _unitOfWork.GetRepository<Role>().Update(row);
             await _unitOfWork.SaveChangesAsync();//提交
