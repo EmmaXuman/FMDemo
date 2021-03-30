@@ -10,5 +10,6 @@ namespace FW.WebCore
         public long DataCenterId { get; set; }
         public int LoginFailedCountLimits { get; set; }
         public int LoginLockedTimeout { get; set; }
+        public string DefaultLanguage { get; set; }
     }
 }

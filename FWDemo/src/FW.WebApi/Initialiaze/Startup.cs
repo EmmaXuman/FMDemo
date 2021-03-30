@@ -5,7 +5,10 @@ using FW.DbContexts;
 using FW.Models.Automapper;
 using FW.Services;
 using FW.UintOfWork;
+using FW.WebApi.Fileters;
+using FW.WebApi.Filters;
 using FW.WebCore;
+using FW.WebCore.MultiLanguages;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
@@ -44,7 +47,19 @@ namespace FW.WebApi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices( IServiceCollection services )
         {
-            services.AddControllers();
+            services.AddMultiLanguages();
+
+            //services.AddControllers();
+            services.AddControllers(options =>
+            {
+                options.Filters.Add<ApiResultFilter>();
+                options.Filters.Add<ApiExceptionFilter>();
+            }).AddDataAnnotationsLocalization(options=>
+            {
+                options.DataAnnotationLocalizerProvider = ( type, factory ) =>
+                  factory.Create(typeof(SharedResource));
+            });
+
             var connStr = Configuration.GetSection("ConnectionStrings:MSDbContext").Value;
             services.AddUnitOfWorkService<MSDbContext>(options=> { options.UseMySql(Configuration.GetSection("ConnectionStrings:MSDbContext").Value); });
 
@@ -70,6 +85,8 @@ namespace FW.WebApi
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            app.UseMultiLanguage(Configuration);//添加多语言本地化支持
 
             app.UseRouting();
 

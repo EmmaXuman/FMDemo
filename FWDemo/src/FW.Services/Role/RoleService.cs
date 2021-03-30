@@ -6,6 +6,7 @@ using FW.Entities;
 using FW.Models.ViewModel;
 using FW.UintOfWork.UnitOfWork;
 using FW.WebCore.Core;
+using Microsoft.Extensions.Localization;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -15,7 +16,7 @@ namespace FW.Services
 {
     public class RoleService : BaseService, IRoleService
     {
-        public RoleService( IUnitOfWork<MSDbContext> unitOfWork, IMapper mapper, IdWorker idWorker,IClaimsAccessor claimsAccessor ) : base(unitOfWork, mapper, idWorker, claimsAccessor)
+        public RoleService( IUnitOfWork<MSDbContext> unitOfWork, IMapper mapper, IdWorker idWorker, IClaimsAccessor claimsAccessor, IStringLocalizer localizer ) : base(unitOfWork, mapper, idWorker, claimsAccessor, localizer)
         {
         }
 
