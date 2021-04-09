@@ -60,7 +60,6 @@ namespace FW.WebApi
                   factory.Create(typeof(SharedResource));
             });
 
-            var connStr = Configuration.GetSection("ConnectionStrings:MSDbContext").Value;
             services.AddUnitOfWorkService<MSDbContext>(options=> { options.UseMySql(Configuration.GetSection("ConnectionStrings:MSDbContext").Value); });
 
             //using MS.WebCore;
