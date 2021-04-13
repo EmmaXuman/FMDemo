@@ -17,7 +17,7 @@ namespace FW.Redis
             redisConfig = _redisConfig;
         }
 
-        public static ConnectionMultiplexer CetConnection()
+        public static ConnectionMultiplexer GetConnection()
         {
             if (connection == null)
             {
