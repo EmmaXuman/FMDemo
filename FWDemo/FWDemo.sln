@@ -45,7 +45,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CommonTests", "tests\Common
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApiTests", "tests\WebApiTests\WebApiTests.csproj", "{81161370-3AAD-480B-B4F6-6705BC6A1D6F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FW.Redis", "src\FW.Redis\FW.Redis.csproj", "{CF49C9E2-F732-498F-A384-67B8706906F7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FW.Redis", "src\FW.Redis\FW.Redis.csproj", "{CF49C9E2-F732-498F-A384-67B8706906F7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FW.Component.Pay", "src\FW.Component.Pay\FW.Component.Pay.csproj", "{F685AD4F-969F-4E88-A2F6-026DD389D969}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -105,6 +107,10 @@ Global
 		{CF49C9E2-F732-498F-A384-67B8706906F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CF49C9E2-F732-498F-A384-67B8706906F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CF49C9E2-F732-498F-A384-67B8706906F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F685AD4F-969F-4E88-A2F6-026DD389D969}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F685AD4F-969F-4E88-A2F6-026DD389D969}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F685AD4F-969F-4E88-A2F6-026DD389D969}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F685AD4F-969F-4E88-A2F6-026DD389D969}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -130,6 +136,7 @@ Global
 		{14684581-876F-4A70-99BF-E9E1952B03C2} = {27408EB5-468E-4CC0-B5BF-8FAE3A5A25FA}
 		{81161370-3AAD-480B-B4F6-6705BC6A1D6F} = {27408EB5-468E-4CC0-B5BF-8FAE3A5A25FA}
 		{CF49C9E2-F732-498F-A384-67B8706906F7} = {D5ECDFD3-5FBF-46AC-80F9-D3AFF0BB2C9B}
+		{F685AD4F-969F-4E88-A2F6-026DD389D969} = {429CE456-BD06-400B-A002-992FABC96F6C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8E5F50CD-3881-416E-8FCD-224873BA5C9B}
