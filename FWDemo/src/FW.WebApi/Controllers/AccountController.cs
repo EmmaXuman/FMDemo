@@ -1,5 +1,5 @@
 ﻿using FW.Compoment.Jwt.UserClaim;
-using FW.Models.ViewModel;
+using FW.Models.RequestModel;
 using FW.Services.Account;
 using FW.WebApi.Controllers.Base;
 using FW.WebCore.Core;
@@ -21,9 +21,9 @@ namespace FW.WebApi.Controllers
 
         [HttpPost]
         [AllowAnonymous]
-        public async Task<ExecuteResult<UserData>> Login( LoginViewModel viewModel )
+        public async Task<ExecuteResult<UserData>> Login( LoginReq req )
         {
-            return await _accountService.Login(viewModel);
+            return await _accountService.Login(req);
         }
     }
 }

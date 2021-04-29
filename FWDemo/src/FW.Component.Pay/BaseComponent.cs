@@ -1,9 +1,8 @@
 ﻿using FW.Component.Pay.Dtos;
+using FW.Component.Pay.Enums;
 using FW.Component.Pay.Event;
 using Microsoft.AspNetCore.Http;
 using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace FW.Component.Pay
 {
@@ -12,6 +11,7 @@ namespace FW.Component.Pay
     /// </summary>
     public abstract class BaseComponent
     {
+        public abstract PayChanel PayChannel { get; }
         /// <summary>
         /// 准备发起支付事件
         /// </summary>

@@ -10,8 +10,8 @@ namespace FW.Services
 {
     public interface IRoleService:IBaseService
     {
-        Task<ExecuteResult<Role>> Create( RoleViewModel viewModel );
-        Task<ExecuteResult> Update( RoleViewModel viewModel );
-        Task<ExecuteResult> Delete( RoleViewModel viewModel );
+        Task<ExecuteResult<Role>> Create( RoleReq viewModel );
+        Task<ExecuteResult> Update( RoleReq viewModel );
+        Task<ExecuteResult> Delete( RoleReq viewModel );
     }
 }

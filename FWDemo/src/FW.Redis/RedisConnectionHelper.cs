@@ -30,7 +30,10 @@ namespace FW.Redis
             {
                 lock (_lock)
                 {
-                    redisInstance = new RedisConnectionHelper();
+                    if (redisInstance == null)
+                    {
+                        redisInstance = new RedisConnectionHelper();
+                    }
                 }
             }
             return redisInstance;
@@ -43,7 +46,10 @@ namespace FW.Redis
             {
                 lock (_lock)
                 {
-                    connection = ConnectionMultiplexer.Connect(_redisConfig.Host);
+                    if (connection == null)
+                    {
+                        connection = ConnectionMultiplexer.Connect(_redisConfig.Host);
+                    }
                 }
             }
             return connection;

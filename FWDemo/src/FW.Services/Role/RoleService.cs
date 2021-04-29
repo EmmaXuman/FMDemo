@@ -20,7 +20,7 @@ namespace FW.Services
         {
         }
 
-        public async Task<ExecuteResult<Role>> Create( RoleViewModel viewModel )
+        public async Task<ExecuteResult<Role>> Create( RoleReq viewModel )
         {
             ExecuteResult<Role> result = new ExecuteResult<Role>();
 
@@ -44,7 +44,7 @@ namespace FW.Services
             return result;
         }
 
-        public async Task<ExecuteResult> Delete( RoleViewModel viewModel )
+        public async Task<ExecuteResult> Delete( RoleReq viewModel )
         {
             ExecuteResult result = new ExecuteResult();
             if (viewModel.CheckField(ExecuteType.Delete, _unitOfWork) is ExecuteResult checkResult && !checkResult.IsSucceed)
@@ -57,7 +57,7 @@ namespace FW.Services
             return result;
         }
 
-        public async Task<ExecuteResult> Update( RoleViewModel viewModel )
+        public async Task<ExecuteResult> Update( RoleReq viewModel )
         {
             ExecuteResult result = new ExecuteResult();
 

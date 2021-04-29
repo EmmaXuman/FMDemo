@@ -10,6 +10,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Reference Include="AopSdk">
+      <HintPath>..\FW.WebApi\Lib\AopSdk.dll</HintPath>
+    </Reference>
     <Reference Include="WxPayAPI">
       <HintPath>..\FW.WebApi\Lib\WxPayAPI.dll</HintPath>
     </Reference>

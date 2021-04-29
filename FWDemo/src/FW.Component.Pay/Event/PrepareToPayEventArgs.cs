@@ -1,4 +1,6 @@
-﻿using System;
+﻿using FW.Component.Pay.Dtos;
+using FW.Component.Pay.Enums;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -13,7 +15,7 @@ namespace FW.Component.Pay.Event
         /// <summary>
         /// 发起支付的渠道
         /// </summary>
-        public PayChannel PayChannel { get; set; }
+        public PayChanel PayChannel { get; set; }
         /// <summary>
         /// 发起支付的方式
         /// </summary>

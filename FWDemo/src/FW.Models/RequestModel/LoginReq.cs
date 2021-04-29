@@ -13,9 +13,9 @@ using System;
 using System.ComponentModel.DataAnnotations;
 using System.Threading.Tasks;
 
-namespace FW.Models.ViewModel
+namespace FW.Models.RequestModel
 {
-    public class LoginViewModel
+    public class LoginReq
     {
         [Display(Name = "LoginViewModel_DisplayName_Account")]
         [Required(ErrorMessage = "{0}必填")]

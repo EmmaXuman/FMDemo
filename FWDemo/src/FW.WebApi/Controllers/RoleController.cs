@@ -21,22 +21,22 @@ namespace FW.WebApi.Controllers
         }
 
         [HttpPost]
-        public async Task<ExecuteResult> Post( RoleViewModel viewModel )
+        public async Task<ExecuteResult> Post( RoleReq req )
         {
-            return await _roleService.Create(viewModel);
+            return await _roleService.Create(req);
         }
 
 
         [HttpPut]
-        public async Task<ExecuteResult> Put( RoleViewModel viewModel )
+        public async Task<ExecuteResult> Put( RoleReq req )
         {
-            return await _roleService.Update(viewModel);
+            return await _roleService.Update(req);
         }
 
         [HttpDelete]
         public async Task<ExecuteResult> Delete( long id )
         {
-            return await _roleService.Delete(new RoleViewModel { Id = id });
+            return await _roleService.Delete(new RoleReq { Id = id });
         }
     }
 }

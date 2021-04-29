@@ -4,9 +4,9 @@ using FW.UintOfWork.UnitOfWork;
 using FW.WebCore.Core;
 using System.ComponentModel.DataAnnotations;
 
-namespace FW.Models.ViewModel
+namespace FW.Models.RequestModel
 {
-    public class RoleViewModel
+    public class RoleReq
     {
         public long Id { get; set; }
 

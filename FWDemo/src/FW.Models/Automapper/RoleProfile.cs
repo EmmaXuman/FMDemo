@@ -11,7 +11,7 @@ namespace FW.Models.Automapper
     {
         public RoleProfile()
         {
-            CreateMap<RoleViewModel, Role>();
+            CreateMap<RoleReq, Role>();
         }
     }
 }

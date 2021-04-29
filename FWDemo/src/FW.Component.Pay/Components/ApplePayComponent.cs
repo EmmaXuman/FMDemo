@@ -14,6 +14,7 @@ namespace FW.Component.Pay.Components
 {
     public class ApplePayComponent : BaseComponent
     {
+        public override PayChanel PayChannel => PayChanel.ApplePay;
         private const string VERIFY_URL = "https://buy.itunes.apple.com/verifyReceipt";
         private const string VERIRY_URL_SANDBOX = "https://sandbox.itunes.apple.com/verifyReceipt";
         private readonly IConfiguration _configuration;

@@ -15,7 +15,7 @@ namespace FW.Component.Pay.Components
 {
     public class WeChatComponent : BaseComponent
     {
-
+        public override PayChanel PayChannel => PayChanel.WeChatPay;
         public override PayRes AppPay( PayReq req )
         {
             var eventArgs = BuildPrepareToPayEventArgs(req, PayMethod.App);

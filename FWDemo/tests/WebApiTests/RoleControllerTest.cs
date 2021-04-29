@@ -32,7 +32,7 @@ namespace WebApiTests
         [Fact]
         public async Task Post_CreateRole_ReturnTrue()
         {
-            RoleViewModel viewModel = new RoleViewModel
+            RoleReq viewModel = new RoleReq
             {
                 Name = "RoleForPostTest",
                 DisplayName = "RoleForPostTest"
@@ -54,7 +54,7 @@ namespace WebApiTests
         [Fact]
         public async Task Put_UpdateRole_ReturnTrue()
         {
-            RoleViewModel viewModel = new RoleViewModel
+            RoleReq viewModel = new RoleReq
             {
                 Name = "RoleForPutTest",
                 DisplayName = "RoleForPutTest"

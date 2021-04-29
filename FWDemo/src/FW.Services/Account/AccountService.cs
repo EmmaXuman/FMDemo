@@ -3,7 +3,7 @@ using FW.Common.IDCode;
 using FW.Compoment.Jwt;
 using FW.Compoment.Jwt.UserClaim;
 using FW.DbContexts;
-using FW.Models.ViewModel;
+using FW.Models.RequestModel;
 using FW.UintOfWork.UnitOfWork;
 using FW.WebCore;
 using FW.WebCore.Core;
@@ -24,9 +24,9 @@ namespace FW.Services.Account
             _siteSetting = options.Value;
         }
 
-        public async Task<ExecuteResult<UserData>> Login( LoginViewModel viewModel )
+        public async Task<ExecuteResult<UserData>> Login( LoginReq req )
         {
-            var result = await viewModel.LoginValidate(_unitOfWork, _mapper, _siteSetting, _localizer);
+            var result = await req.LoginValidate(_unitOfWork, _mapper, _siteSetting, _localizer);
             if (result.IsSucceed)
             {
                 result.Result.Token = _jwtService.BuildToken(_jwtService.BuildClaims(result.Result));

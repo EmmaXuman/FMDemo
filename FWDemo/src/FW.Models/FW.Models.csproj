@@ -16,4 +16,8 @@
     <ProjectReference Include="..\FW.WebCore\FW.WebCore.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="ViewModel\" />
+  </ItemGroup>
+
 </Project>
